@@ -1,0 +1,43 @@
+#1)Create three variables in a single line and assign different values to them 
+a,b,c = 10,5.4,"study"
+print (a,b,c)
+
+#2)Create a variable of value type complex and swap it with another variable whose value is an integer.
+a,b=10,5+2j
+a,b=b,a
+print a
+
+#3)Swap two numbers using the third variable as the result name and do the same task without using any third variable.
+#program 1
+a,b=10,20
+c=a
+a=b
+b=c
+print (a,b)
+
+#program 2
+a,b=11,22
+a,b=b,a
+print(a,b)
+
+#4)Write a program to print the value given by the user by using both Python 2.x and Python 3.x Version.
+var1 = input("user value ")
+print (var1)
+
+
+#5)Write a program to complete the task given
+x=int(input("enter number any between 1 to 10 "))
+y=int(input("enter number any between 1 to 10 "))
+z=x+y+30
+print (z)
+
+#6)Write a program to check the data type
+x = eval(input("Please enter any value: "))
+
+#7)If one data type value is assigned to ‘a’ variable and then a different data type value is assigned to ‘a’ again. Will it change the value. If Yes then Why?
+#ans - yes. We can re-assign the value to any variable with any value of any data type. It will take re-assign value.
+#e.g.
+a=3
+a='string'
+print (a)
+#ans -string
