@@ -1,0 +1,50 @@
+#1)Write a program in Python to allow the error of syntax to go in exception. 
+
+try:
+  print(x)
+except NameError:
+  print("Variable x is not defined")
+except:
+  print("Something else went wrong")
+
+
+#2)Write a program in Python to allow user to open a file by using argv module. 
+# If the entered name is incorrect throw an exception and ask them to enter the name again. 
+import sys
+with open(sys.argv[1], 'r' ) as f:
+    contents = f.read()
+print (contents)
+
+
+#3)Write a program to handle an error if the user entered the number more than four digits it should return “Please length is too short/long !!! Please provide only four digits” 
+while true: 
+    try:
+        x = int(input("Enter number "))
+        if(len(x) == 4):
+            print(x)
+        elif(len(x) > 4):
+            print("Unsuccessful try!")
+        elif(len(x) < 4):
+            print("Unsuccessful try!")
+    except:
+        print("Please length is too short/long !!! Please provide only four digits ")
+
+#4)Create a login page backend to ask user to enter the UserEmail and password. Make sure to ask Re-Type Password and if the password is incorrect give chance to enter it again but it should not be more than 3 times.
+count = 1
+uname = input("Enter Username: ")
+pword = input("Enter Password: ")
+try: 
+    if (uname == "patil1000" and pword == "abc123"):
+        print("Login is Successful!!")
+        break
+    else:
+        raise Exception
+except:
+    if(count<=3):
+        print("Incorrect username or password, enter again ")
+        count+=1
+        continue
+    else:
+        print("No more Attempts")
+        break
+
